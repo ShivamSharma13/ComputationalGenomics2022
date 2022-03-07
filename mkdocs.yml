@@ -1,0 +1,23 @@
+site_name: ComputationalGenomics2022
+site_url: https://example.com/
+nav:
+    - About: about.md
+    - Team 1 Documentation:
+        - Genome Assembly: team-1-genome-assembly.md
+        - 'Gene Prediction': team-1-gene-prediction.md
+        - 'Functional Annotation': team-1-functional-annotation.md
+        - 'Comparative Genomics': team-1-comparative-genomics.md
+        - 'Predictive Web Server': team-1-predictive-web-server.md
+    - 'Team 2 Documentation':
+        - 'Genome Assembly': team-2-genome-assembly.md
+        - 'Gene Prediction': team-2-gene-prediction.md
+        - 'Functional Annotation': team-2-functional-annotation.md
+        - 'Comparative Genomics': team-2-comparative-genomics.md
+        - 'Predictive Web Server': team-2-predictive-web-server.md
+    - 'Team 3 Documentation':
+        - 'Genome Assembly': team-3-genome-assembly.md
+        - 'Gene Prediction': team-3-gene-prediction.md
+        - 'Functional Annotation': team-4-functional-annotation.md
+        - 'Comparative Genomics': team-4-comparative-genomics.md
+        - 'Predictive Web Server': team-4-predictive-web-server.md
+theme: readthedocs
