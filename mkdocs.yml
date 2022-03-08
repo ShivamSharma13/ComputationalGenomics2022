@@ -1,9 +1,9 @@
 site_name: ComputationalGenomics2022
-site_url: https://example.com/
+site_url: https://computationalgenomics2022.readthedocs.io/
 nav:
-    - About: about.md
-    - Team 1 Documentation:
-        - Genome Assembly: team-1-genome-assembly.md
+    - 'About': about.md
+    - 'Team 1 Documentation':
+        - 'Genome Assembly': team-1-genome-assembly.md
         - 'Gene Prediction': team-1-gene-prediction.md
         - 'Functional Annotation': team-1-functional-annotation.md
         - 'Comparative Genomics': team-1-comparative-genomics.md
