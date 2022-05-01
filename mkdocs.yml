@@ -7,17 +7,17 @@ nav:
         - 'Gene Prediction': team-1-gene-prediction.md
         - 'Functional Annotation': team-1-functional-annotation.md
         - 'Comparative Genomics': team-1-comparative-genomics.md
-        - 'Predictive Web Server': team-1-predictive-web-server.md
+        - 'Predictive Web Server': team-1-web-server.md
     - 'Team 2 Documentation':
         - 'Genome Assembly': team-2-genome-assembly.md
         - 'Gene Prediction': team-2-gene-prediction.md
         - 'Functional Annotation': team-2-functional-annotation.md
         - 'Comparative Genomics': team-2-comparative-genomics.md
-        - 'Predictive Web Server': team-2-predictive-web-server.md
+        - 'Predictive Web Server': team-2-web-server.md
     - 'Team 3 Documentation':
         - 'Genome Assembly': team-3-genome-assembly.md
         - 'Gene Prediction': team-3-gene-prediction.md
-        - 'Functional Annotation': team-4-functional-annotation.md
-        - 'Comparative Genomics': team-4-comparative-genomics.md
-        - 'Predictive Web Server': team-4-predictive-web-server.md
+        - 'Functional Annotation': team-3-functional-annotation.md
+        - 'Comparative Genomics': team-3-comparative-genomics.md
+        - 'Predictive Web Server': team-3-web-server.md
 theme: readthedocs
