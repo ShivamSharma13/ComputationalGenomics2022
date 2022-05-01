@@ -10,7 +10,7 @@ Zack Mudge, Varsha Bhat, Shreyash Gupta, Palak Aggarwal, Mannan Bhola, Erin Conn
 
 ### The pipeline integrated in the backend is shown in this diagram:
 <br></br>
-<img src="imgs/Pipeline.png" width="1200">
+<img src="Team1-WebServer-imgs/Pipeline.png" width="1200">
 <br></br>
 
 
@@ -40,7 +40,7 @@ Zack Mudge, Varsha Bhat, Shreyash Gupta, Palak Aggarwal, Mannan Bhola, Erin Conn
 
 ### The website's homepage is shown below:
 <br></br>
-<img src="imgs/screenshot.PNG" width="800">
+<img src="Team1-WebServer-imgs/screenshot.PNG" width="800">
 <br></br>
 
 

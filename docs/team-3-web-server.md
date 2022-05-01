@@ -6,8 +6,8 @@ Link will shown here
 ## Architecture, Pipeline, Job Req. & Outputs
 |||
 |--|--|
-|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide2.PNG)|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide3.PNG)|
-|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide4.PNG)|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide5.PNG)|  
+|![alt text](Team3-WebServer-imgsSlide2.PNG)|![alt text](Team3-WebServer-imgs/Slide3.PNG)|
+|![alt text](Team3-WebServer-imgs/Slide4.PNG)|![alt text](Team3-WebServer-imgs/Slide5.PNG)|  
 
 
 ## Procedure  
