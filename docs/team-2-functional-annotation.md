@@ -173,3 +173,14 @@ There were a total of 1535 (out of 11178 sequences) transmembrane proteins that 
  7157 total unique annotations
 
 
+# References
+•	Arango-Argoty, G., Garner, E., Pruden, A. et al. DeepARG: a deep learning approach for predicting antibiotic resistance genes from metagenomic data. Microbiome 6, 23 (2018). https://doi.org/10.1186/s40168-018-0401-z
+
+•	Cantalapiedra, Carlos P., Ana Hernandez-Plaza, Ivica Letunic, Peer Bork, Jaime Huerta-Cepas.biorxiv (2021). eggNOG-mapper v2: functional annotation, orthology assignments, and domain prediction at the metagenomic scale. doi: https://doi.org/10.1101/2021.06.03.446934
+
+•	Chen L, Yang J, Yu J, Yao Z, Sun L, Shen Y, Jin Q. VFDB: a reference database for bacterial virulence factors. Nucleic Acids Res. 2005 Jan 1;33(Database issue):D325-8. doi: 10.1093/nar/gki008. PMID: 15608208; PMCID: PMC539962.
+
+•	Roosaare M, Puustusmaa M, Möls M, Vaher M, Remm M. 2018. PlasmidSeeker: identification of known plasmids from bacterial whole genome sequencing reads. PeerJ 6:e4588 https://doi.org/10.7717/peerj.4588
+
+•	Törönen P, Holm L. PANNZER-A practical tool for protein function prediction. Protein Sci. 2022 Jan;31(1):118-128. doi: 10.1002/pro.4193. Epub 2021 Oct 14. PMID: 34562305; PMCID: PMC8740830.
+

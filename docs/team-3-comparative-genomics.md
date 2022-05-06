@@ -211,6 +211,37 @@ Com_gen_R.R script is used to visualize the NJ trees from the newick output file
 ### 5.1. Usage
 ```Rscript Com_gen_R.R metadata.txt kSNPtree CHEWtree STRINGtree ANItree ```
 
+## Results
+
+The three methods of tree assembly gave similar results on which samples were part of a cluster identifying the outbreak. The most easily implimented was FastANI. 
+
+
+<img width="812" alt="ChewBBACA" src="https://github.gatech.edu/storage/user/57465/files/0bf465a9-dadd-488e-a28f-0b96cd57b10c">
+Figure 1. Results from ChewBBACA, with the outbreak cluster in red.
+
+
+<img width="650" alt="ksnp3_tree" src="https://github.gatech.edu/storage/user/57465/files/57722211-a442-4f10-94c6-b528fe8c6be2">
+Figure 2. Results from kSNP3, with the outbreak cluster in red.
+
+
+<img width="868" alt="FastANItree" src="https://github.gatech.edu/storage/user/57465/files/ffe8d5e8-a2d3-44ce-bf32-1162d337b344">
+Figure 3. Results from FastANI, with the outbreak cluster in red.
+
+
+When incorporating the outbreak strain identification to the metadata, we were able to plot the most likely causal agents of the Listeria outbreak, the timeline of the outbreak, and map the outbreak over the continental US.
+
+
+<img width="965" alt="Screen Shot 2022-05-02 at 13 11 31" src="https://github.gatech.edu/storage/user/57465/files/db84ea40-d695-49eb-b120-4b18f0183e48">
+Figure 4. The foods associated with the outbreak include cream cheese, queso fresco, greek salad and (not pictured) cottage cheese. Blue dots indicate that the food group was consumed by the person from which the Listeria sample was taken. Food groups were determined as suspicious if they occurred exclusively for patients with an outbreak strain of Listeria. 
+
+
+<img width="566" alt="Screen Shot 2022-05-02 at 13 11 59" src="https://github.gatech.edu/storage/user/57465/files/71c7871a-3728-4179-93e7-03eab7a34fa3">
+Figure 5. The timeline of the outbreak matches the increase in the rate of Listeria cases over the period of Feburary to May 2021. Red bars indicate occurences that were identified as being part of the outbreak, grey bars indicate sporadic occurences.
+
+
+<img width="563" alt="Screen Shot 2022-05-02 at 13 11 47" src="https://github.gatech.edu/storage/user/57465/files/14a41541-4a4f-4f78-b67f-f2c056c497f8">
+Figure 6. The outbreak occured in the eastern coast of the United States. Circle size indicates number of samples from the location. Red circles are from samples determined to be part of the outbreak and grey circles indicate sporadic occurences.
+
 
 ## References
 

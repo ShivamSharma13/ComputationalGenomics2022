@@ -137,3 +137,34 @@ kSNP3 -in in_list -outdir <output_dir> -k <kmer> -CPU <cores> -NJ -ML
 
 ```
 Output consists of multiple .parsimony (default), .NJ (optional), and .ML (optional) trees. 
+
+# Results
+
+## FastMLST
+
+Cases associated with our cultured isolates were concentrated in the Midwest.
+![Map](Images/Map.png)
+
+An epidemic curve of all isolates shows a peak in incidence centered at Week 43 in Indiana, Minnesota, and South Dakota.
+![epi_all](Images/epicurve_all.png)
+
+Apples, Spinach, and Lettuce are the only foods for which fastMLST identified ST11 (Shiga toxin-producing E. coli) cases within a 60 day window.
+![epi_foods](Images/epicurve_foods.png)
+
+This same pattern was also observed with a high identity cluster based on fastANI analysis.
+![epi_foods_ani](Images/epicurve_foods_ANI.png)
+
+Again, this pattern was further confirmed with a maximum-likelihood tree based on kSNP analysis.
+![ksnp_ml](Images/ksnp_tree.png)
+
+We found a homogenous antimicrobial resistance profile by analyzing with AMRfinder, with no evidence suggesting resistance to:
+Penicillin
+Fluroquinolones
+Cephalosporins
+Macrolides
+Lincosamides
+
+Therefore we would recommend health authorities to follow up and investigate the food supply chain for Apples, Spinach, and Lettuce in Indiana, Kansas, Minnesota, and South Dakota to narrow down the source of this outbreak cluster.
+
+![amr](Images/anti_res.png)
+

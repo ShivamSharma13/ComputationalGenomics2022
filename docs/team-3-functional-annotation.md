@@ -18,7 +18,7 @@ makeblastdb -in VFDB_setB_pro.fas -dbtype pro
 * deeparg
 ## Pipeline Summary
 
-![Visual of the pipeline](team-3-functional-annotation.md/Pipeline.png?raw=true "Pipeline")
+![Visual of the pipeline](Pipeline.png?raw=true "Pipeline")
 
 We first cluster the genes to reduce the runtime for all other operations.
 

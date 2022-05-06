@@ -1,3 +1,4 @@
+## See `docs/index.md` for our wiki documentation.
 
 # Team 1 Gene Prediction
 

@@ -10,6 +10,8 @@ The Genome Assembly group members for Team 2 are:
 * Howard Page
 * Harini Narasimhan
 
+![Screenshot](final_pipeline.jpg)
+
 ## Installation
 
 ```
@@ -52,7 +54,15 @@ IBDA_UD requires GCC to compile source code. All IDBA executables will be listed
 The fastQC command used was
 ```
 fastqc *_1.fastq  *_2.fastq
+
 ```
+FastQC <br>
+* Used to provide an overview of basic quality control metrics for raw next generation sequencing data.
+* Reason to choose- Easy graphical visualization, Industry standard <br>
+* Criteria- Basic statistics, Per base sequence quality, sequence length distribution
+![Screenshot](fastqc.jpg)
+###### (Above is an example of FastQC visualization)
+ 
 ## Trimming
 Trimming was done using trimmomatic. The following command was used
 ```
@@ -60,10 +70,39 @@ trimmomatic PE input_1.fq.gz input_2.fq.gz output_1.fq output_1_unpaired.fq outp
 
 cat output_1_unpaired.fq output_2_unpaired.fq > merged_output.fq
 ```
+Trimmomatic <br>
+* Trimmomatic is a fast, multithreaded command line tool that can be used to trim and crop Illumina (FASTQ) data as well as to remove adapters. <br>
+* Adapter sequences should be removed from reads because they interfere with downstream analyses, such as alignment of reads to a reference. The adapters contain the sequencing primer binding sites, the index sequences, and the sites that allow library fragments to attach to the flow cell lawn. <br>
+* Reason to choose- Fast, Works well with paired end reads <br>
+* Criteria- Trimming the ends, maintaining an average quality score, maintaining a minimum read length <br>
 
+## SPADES
+* SPAdes is a universal A-Bruijn assembler <br>
+* It uses k-mers only for building the initial de Bruijn graph <br>
+* SPAdes outputs contigs and allows to map reads back to their positions in the assembly graph after graph simplification
+
+## Platanus_B
+* Platanus_B was designed to improve assemblies by introducing more steps than there are in Platanus and Platanus-allee <br>
+* De novo assembler for bacterial genomes using an iterative error-removal process <br>
+* Platanus_B’s advantages of contiguities and accuracies for short-read inputs is useful to proceed large-scale projects, which target hundreds of isolates and focus on a few variant sites between genomes. 
+
+## MEGAHIT
+* MEGAHIT makes use of succinct de Bruijn graphs <br>
+
+## IDBA_UD
+*  De Bruijn graph approach <br>
+*  The technique of local assembly with paired-end information is used to solve the branch problem of low-depth short repeat regions
+
+## Comparison of different tools
+![Screenshot](tool.jpg)
 
 ## De Novo Assembly Quality Assessment with QUAST
-Using [QUAST v5.0.2](http://quast.sourceforge.net/install.html) for post-QC evalution and visualization. 
+![plot](./QuastReport/example_quast_report.jpg)
+###### (Above is an example of QUAST visualization)
+
+QUAST is a common tool for evaluating the quality of genome assembly. It can calculate basic contig information such as N50 (without reference), and can also calculate fraction, duplication, misassembly, unaligned, mismatch and other information by aligning the reference genome (reference-based).
+
+We are using [QUAST v5.0.2](http://quast.sourceforge.net/install.html) for post-QC evalution and visualization. 
 
 After replacing module ```cgi.escape``` to ```html.escape``` in ``` quast_libs/site_packages/jsontemplate/jsontemplate.py ```.
 
@@ -71,62 +110,12 @@ Run following code and direct to ```report.pdf``` to check the evalution result 
 ```
 quast.py <spades_contigs.fasta> <megahit_contigs.fasta> <platanus_contigs.fasta> <idba_contigs.fasta> -o /quast/output
 ```
-## Integration of multiple genome assemblies using Contig Integrator for Sequence Assembly(CISA)
-[CISA v1.3](http://sb.nhri.org.tw/CISA/en/CISA) basically consists of four major phases:
-* Identification of the representative contigs and possible extensions
-* removal and splitting of the contigs that may be misassembled, and clipping of uncertain regions that are located at the extremities of the contigs
-* iterative merging of the contigs with a minimum 30% overlap and estimating the maximal size of repetitive regions
-* merging of the contigs based on the size of repetitive regions
 
-Prerequisite
-
-* MUMmer 3.22 or higher
-
-* BLAST 2.2.25+ or higher
-
-* python2.X
-
-Installation
-```
-conda install -c bioconda mummer
-conda install -c bioconda blast
-wget ftp://sb.nhri.org.tw/CISA/upload/en/2014/3/CISA_20140304-05194132.tar
-tar xf CISA_20140304-05194132.tar
-```
-
-Create the merge.config configuration file
-```
-count=4 
-data=spades.fasta,title=spades
-data=platanus.fasta,title=platanus
-data=megahit.fasta,title=megahit
-data=idba.fasta,title=idba
-Master_file=merge_contigs.fa
-min_length=100
-Gap=11
-```
-Merge contigs
-```
-Merge.py merge.config
-```
-Create the cisa.config configuration file
-```
-genome=n (Fill in the largest total length in assemblies quast report)
-infile=merge_contigs.fa
-outfile=final_contig.fa
-nucmer=/tool/path/MUMmer3.23/nucmer
-R2_Gap=0.95 (default:0.95)
-CISA=/tool/path/CISA1.3
-makeblastdb=/tool/path/makeblastdb
-blastn=/tool/path/blastn
-```
-CISA
-```
-CISA.py cisa.config
-```
-## Evaluate meta_contig with best assembly from single assembler using Quast
-```
-quast.py <cisa_contig.fasta> <best_assembly.fasta>  -o /path/to/output
-```
-
+### References
+1. Leggett, R. M., Ramirez-Gonzalez, R. H., Clavijo, B. J., Waite, D., & Davey, R. P. (2013). Sequencing quality assessment tools to enable data-driven informatics for high throughput genomics. Frontiers in genetics, 4, 288. https://doi.org/10.3389/fgene.2013.00288
+2. Anthony M. Bolger, Marc Lohse, Bjoern Usadel, Trimmomatic: a flexible trimmer for Illumina sequence data, Bioinformatics, Volume 30, Issue 15, 1 August 2014, Pages 2114–2120, https://doi.org/10.1093/bioinformatics/btu170
+3. Gurevich A, Saveliev V, Vyahhi N, Tesler G. QUAST: quality assessment tool for genome assemblies. Bioinformatics. 2013 Apr 15;29(8):1072-5. doi: 10.1093/bioinformatics/btt086. Epub 2013 Feb 19. PMID: 23422339; PMCID: PMC3624806.
+4. Bankevich, A., Nurk, S., Antipov, D., Gurevich, A. A., Dvorkin, M., Kulikov, A. S., Lesin, V. M., Nikolenko, S. I., Pham, S., Prjibelski, A. D., Pyshkin, A. V., Sirotkin, A. V., Vyahhi, N., Tesler, G., Alekseyev, M. A., & Pevzner, P. A. (2012). SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing. Journal of computational biology : a journal of computational molecular cell biology, 19(5), 455–477. https://doi.org/10.1089/cmb.2012.0021
+5. Kajitani R, Toshimoto K, Noguchi H, Toyoda A, Ogura Y, Okuno M, Yabana M, Harada M, Nagayasu E, Maruyama H, Kohara Y, Fujiyama A, Hayashi T, Itoh T. Efficient de novo assembly of highly heterozygous genomes from whole-genome shotgun short reads. Genome Res. 2014 Aug;24(8):1384-95. doi: 10.1101/gr.170720.113. Epub 2014 Apr 22. PMID: 24755901; PMCID: PMC4120091.
+6. Yu Peng, Henry C. M. Leung, S. M. Yiu, Francis Y. L. Chin, IDBA-UD: a de novo assembler for single-cell and metagenomic sequencing data with highly uneven depth, Bioinformatics, Volume 28, Issue 11, 1 June 2012, Pages 1420–1428, https://doi.org/10.1093/bioinformatics/bts174
 

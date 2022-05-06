@@ -1,13 +1,36 @@
 # Listeria Outbreak webserver
+To create one stop site for Listeria with a user friendly interface, wherein the user can upload the fasta files and then perform genome assembly, prediction, functional annotation and comparative genomics. The tools for which have been chosen after careful consideration. Visualization is also offered in form of phylogenetic tree and US map with isolate demarcation (metadata has to be filled).
 
 ## URL to the Webserver
-Link will shown here
+### http://groupc.bioappgenome22.biosci.gatech.edu/
+
+## Technologies
+### Front-end
+1. **React** : 
+   A JavaScript front-end library for building UI, Allows usto mix HTML with JS – JSX.
+
+2. CSS - **Material UI** : 
+   Simple, customizable, and accessible CSS library of React components.
+
+3. **Node.js** : 
+   Back-end JavaScript runtime environment that runs on the V8 engine.
+
+4. **D3.js** : 
+   JavaScript library for producing dynamic, interactive data visualizations.
+
+### Back-end
+1. **Flask** : 
+   Micro web framework, lightweight good for routing, request handling and sessions with
+   minimilastic features and high degree of customization.
+  
+
+
 
 ## Architecture, Pipeline, Job Req. & Outputs
 |||
 |--|--|
-|![alt text](Team3-WebServer-imgsSlide2.PNG)|![alt text](Team3-WebServer-imgs/Slide3.PNG)|
-|![alt text](Team3-WebServer-imgs/Slide4.PNG)|![alt text](Team3-WebServer-imgs/Slide5.PNG)|  
+|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide2.PNG)|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide3.PNG)|
+|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide4.PNG)|![alt text](https://github.gatech.edu/computationalgenomics2022/Team3-WebServer/blob/main/Web%20Server_%20Result%20Presentation/Slide5.PNG)|  
 
 
 ## Procedure  
@@ -92,5 +115,8 @@ Hower over the bubble will show a detailed isolates list with top outbreak food 
 8. All set, Our frontend and backend use port 3000 and 5000 respectively.
 
 9. Go to http://localhost:3000/, and explore!
-les/5328b726-adf0-45b3-b6d0-fcc483a693e0" width="400">
 
+## Members  
+|||||||||
+|--|--|--|--|--|--|--|--|
+|Ryan Abramowitz|Arvind Bangaru|Dhruv Karve|Colin Naughton|Haojun Song|Nidhi Koundinya|Haoting Chen|Piyus Mohanty|  
